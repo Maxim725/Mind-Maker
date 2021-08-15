@@ -18,12 +18,16 @@ module.exports = {
 
 	resolve: {
 		extensions: ['.tsx', '.ts', '.json', '.js'],
-		alias: {}
+		alias: {
+			'@': path.resolve(__dirname, 'src')
+		},
 	},
 
 	output: {
 		filename: '[name].[hash].js',
-		path: path.resolve(__dirname, 'dist')
+		path: path.resolve(__dirname, 'dist'),
+		//! React router dom не работает без этого
+		publicPath: '/'
 	},
 
 	optimization: {
@@ -36,6 +40,8 @@ module.exports = {
 	devServer: {
 		port: 3000,
 		hot: isDev,
+		//! React router dom не работает без этого
+		historyApiFallback: true,
 	},
 
 	plugins: [
