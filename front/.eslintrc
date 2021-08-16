@@ -14,7 +14,7 @@
 	"extends": [
 		"eslint:recommended"
 	],
-	// "exclude": [
-	// 	"webpack.config.js"
-	// ]
+	"exclude": [
+		"webpack.config.js"
+	]
 }
