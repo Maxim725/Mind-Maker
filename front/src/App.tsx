@@ -1,17 +1,18 @@
+import { Homepage } from './pages/Homepage'
 import React from 'react'
-class Pop {
-	static show = 'gg'
-}
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { Tests } from './pages/Tests'
+import './app-style.scss'
+import Header from './components/general/header'
 
 export const App = () => {
-	new Promise((res) => res('a')).then(d => console.log(d))
-	const vars = 0
-
-	console.log(Pop.show)
 	return (
-		<div className="box">
-			<h2>React tsx</h2>
-			<div className="conainer-content">Container</div>
-		</div>
+		<BrowserRouter>
+			<Header />
+			<Switch>
+				<Route exact path="/" component={Homepage} />
+				<Route exact path="/tests" component={Tests} />
+			</Switch>
+		</BrowserRouter>
 	)
 }

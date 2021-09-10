@@ -1,0 +1,1 @@
+export { SearchMini as default } from './SearchMini'

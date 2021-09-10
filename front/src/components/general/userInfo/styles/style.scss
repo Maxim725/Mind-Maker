@@ -1,0 +1,14 @@
+.user {
+	&__header {
+		width: 32px;
+		height: 32px;
+
+		position: relative;
+		overflow: hidden;
+	}
+
+	&__icon {
+		position: absolute;
+		max-width: 100%;
+	}
+}

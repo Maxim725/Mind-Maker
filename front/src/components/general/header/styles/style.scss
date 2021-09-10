@@ -1,0 +1,38 @@
+.header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	height: 60px;
+	max-width: 100%;
+	background-color: #39424e;
+
+	color: white;
+
+	&__links {
+		display: flex;
+		align-items: center;
+		width: 100%;
+		max-width: 300px;
+		justify-content: space-between;
+	}
+	&__link {
+		text-transform: uppercase;
+		font-weight: bold;
+
+		user-select: none;
+		cursor: pointer;
+		color: white;
+	}
+
+	&__right {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		width: 100%;
+		// max-width: 70px;
+
+		flex: 0 0 70px;
+	}
+}
